@@ -1,7 +1,8 @@
 # ffos_on_lgfx0
 update Instructions for ffos 2.6 (Firefox OS 2.6) on LG fx0 (LGL25)
 
-i collected all the install instructions and its necessary files into these github repo
+i collected all the install instructions and its necessary files into these github repo.
+it woked for me, but can maybe brick you phone. ;)
 
 
 # installation
