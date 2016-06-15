@@ -1,0 +1,1 @@
+!function(global,undefined){"use strict";var PLACEMENT="sponsorship";global.onload=function(){var adContent=global.parent.frames.ad_main.ados_results;global.name="ad-"+PLACEMENT,eval(adContent[PLACEMENT])},ados.run.push(function(){ados_loadDiv(PLACEMENT)})}(this);
