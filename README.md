@@ -9,7 +9,10 @@ it woked for me, but can maybe brick you phone. ;)
 # installation
 
 ######################
-## enable fastboot
+##1) enable fastboot
+At first you have to unlock your Device to install Firefox OS.
+
+"Fastboot mode is important because it is the first step in flashing custom updated and newer builds of Firefox OS/B2G on our phones. Fastboot is the first step because it is the mode that will actually allow us to flash new images (like custom recoveries new Firefox OS versions) to our devices in a mostly safe manner. Access to fastboot mode simply means that our device is "unlocked" and ready to hack and modify!"(quote from source)
 
 1] Enable the DEVELOPER-MENU and ADB-DEBUGGING on your phone,  Settings > Device Information > More Information > Developer Menu switch.
 
@@ -58,7 +61,8 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 
 
 #########################
-## install TWRP v2.8.7.0
+##2) install TWRP v2.8.7.0
+TWRP is a custom recovery used to install custom software on your Android device.
 
 1] install TWRP by comunity-pre-compiled img
 - fastboot flash recovery twrpfilename.img
@@ -81,7 +85,7 @@ https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=ne
 
 
 ########################
-## install FFOS 2.6
+##3) install FFOS 2.6
 
 0] connect the device to the PC using USB wire with the debug mode and adb activated
 
@@ -94,9 +98,17 @@ https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=ne
 3] reboot device if successful eg with:
 - adb reboot
 
+#### source:
+https://ftp.mozilla.org/pub/b2g/nightly/latest-mozilla-central-flame-kk/
+https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh
 
 ########################
-## install bluetooth and NFC bugfix
+##4) install bluetooth and NFC bugfix for FFOS 2.6
+It fixes the bluetooth and NFC issues by:
+Flashing a modified boot image that contains an updated ramdisk (kernel is untouched).
+This flashable zip also fixes the tiny bootanimation problem.
+
+
 
 1] connect device to PC via USB and start TWRP
 - adb reboot recovery
@@ -113,7 +125,8 @@ https://www.reddit.com/r/fx0/comments/47makh/fxos_26_compatibility_update_packag
 
 
 ########################
-## change Network to other than CDMA, (to 3G/4G/...)
+##5) change Default Network from CDMA to 3G/4G/...
+e.g. to use your Device from Europe
 
 1] pull config
 - adb pull /system/build.prop
