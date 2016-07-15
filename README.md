@@ -64,7 +64,7 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 ##2) install TWRP v2.8.7.0
 TWRP is a custom recovery used to install custom software on your Android device.
 Boot TWRP:
-- 1) press and hold button power & volume down, until "au"-logo appears, then release both buttons and quickly hold both buttons again
+- 1) press and hold button power & volume down, until "au"-logo appears, then release both buttons and quickly hold both buttons again (in my case i it wont start TWRP, but an FX0 programm which i dont nee)ded
 -  2) connect usb cable to phone, type into terminal ´sudo adb reboot recovery´
 
 
