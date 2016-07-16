@@ -14,7 +14,7 @@ It woked for me, but can maybe brick your phone. ;)
 this command should show the following content
 
 ```shell
-cat /etc/udev/rules.d/51-android.rules 
+$ cat /etc/udev/rules.d/51-android.rules 
 SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0666", GROUP="plugdev"
 ```
 if not, you need to create this file/line, else **adb** can't access your phone
@@ -32,7 +32,7 @@ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 you should see somthing like 
 
 ```shell
-adb devices
+$ adb devices
 List of devices attached 
 LGOTMS9db5xxxx  device
 ```
