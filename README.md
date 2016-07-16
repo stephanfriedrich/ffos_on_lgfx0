@@ -8,6 +8,25 @@ It woked for me, but can maybe brick your phone. ;)
 # installation
 
 ######################
+##0) make shure the right **[51-android.rules](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)** exists on your system
+
+
+this command should show the following content
+
+```shell
+cat /etc/udev/rules.d/51-android.rules 
+SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0666", GROUP="plugdev"
+```
+if not, you need to create this file/line, else **adb** can't access your phone
+
+```shell
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/51-android.rules
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+```
+
+make shure you insert the right [Vendor ID](https://developer.android.com/studio/run/device.html#VendorIds), in our case this should be **1004**
+
+
 ##1) enable fastboot
 At first you have to unlock your Device to install Firefox OS.
 
