@@ -67,7 +67,7 @@ su
 dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img
 ```
 
-6] exit shell
+6] exit su login & adb shell
 ```shell
 exit
 exit
