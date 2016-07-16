@@ -5,7 +5,7 @@ It woked for me, but can maybe brick your phone. ;)
 
 ![Cell Phone LG Fx0](https://github.com/stephanfriedrich/ffos_on_lgfx0/blob/master/lg_fx0.jpeg?raw=true)
 
-# installation
+# Preparation
 
 ######################
 ##0) make shure the right **[51-android.rules](https://github.com/M0Rf30/android-udev-rules/blob/master/51-android.rules)** exists on your system
@@ -98,6 +98,7 @@ Then the Display should show you a [Download-Titel on Black-Background](./instal
 #### source:
 https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information
 
+# Installation
 
 #########################
 ##2) install TWRP v2.8.7.0
