@@ -70,6 +70,7 @@ dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img
 6] exit shell
 ```shell
 exit
+exit
 ```
 
 7] pull the laf backup
