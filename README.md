@@ -24,7 +24,18 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0666", GROUP="plugdev"' | 
 sudo chmod a+r /etc/udev/rules.d/51-android.rules
 ```
 
-make shure you insert the right [Vendor ID](https://developer.android.com/studio/run/device.html#VendorIds), in our case this should be **1004**
+* make shure you insert the right [Vendor ID](https://developer.android.com/studio/run/device.html#VendorIds), in our case this should be **1004**
+* **disconnect the USB** cable between the phone and the computer.
+* **reconnect** the phone.
+* run ```adb devices``` to confirm that now it has permission to access the phone.
+
+you should see somthing like 
+
+```shell
+adb devices
+List of devices attached 
+LGOTMS9db5xxxx  device
+```
 
 
 ##1) enable fastboot
