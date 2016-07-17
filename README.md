@@ -182,10 +182,14 @@ This flashable ZIP also fixes the tiny bootanimation problem.
 adb reboot recovery
 ```
 
-2] copy [fxup.zip](./install_bugfix/fxup.zip) to internat or microSD storage
+2] copy [fxup.zip](./install_bugfix/fxup.zip) to internal or microSD storage
+
+*when your phone is connect to your pc, you should see the storage in you file browser and could copy the ZIP file easy to the phone*
 
 2] within TWRP install fxup.zip
-- *twrp-menu > install > select Storage > internal or microSD > click fxup.zip* and install it
+- *twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip* and install it
+
+- don't check the signature verification (ZIP file has no signature)
 
 3] reboot device into ffos and it should work
 
