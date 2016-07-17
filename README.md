@@ -140,10 +140,6 @@ sudo adb reboot recovery
 ```shell
 adb reboot recovery
 ```
-Boot TWRP:
-- press and hold button **POWER** & **VOLUME DOWN**, until *"au"*-logo appears, then release both buttons and quickly hold both buttons again (this may need some attempts)
-- the [LG recovery mode](./install_fastboot/original_LG_Recovery_menu.jpg) should appear
-- connect usb cable to phone
 
 #### source:
 https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=new
