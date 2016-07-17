@@ -7,16 +7,16 @@ I read in the internet, that only step 2 can brick your phone, these critical pa
 ![Cell Phone LG Fx0](https://github.com/stephanfriedrich/ffos_on_lgfx0/blob/master/lg_fx0.jpeg?raw=true)
 
 Table of Content:
-You have to follow these steps, if your phone has original software installed. 
-If not and you phone is already rooted (has root privileges), e.g. you dont need step 1.
+You have to follow these steps, if your phone has original software installed.<br>
+If not and you phone is already rooted (has root privileges), e.g. you dont need step 1.<br>
 These commands are for Linux users.
 
-0) Preparation
-1) enable fastboot 
-2) install TWRP v2.8.7.0
-3) install FFOS 2.6
-4) install Bluetooth and NFC bugfix for FFOS 2.6
-5) change Default Network from CDMA to 3G/4G/...
+    0) Preparation
+    1) enable fastboot 
+    2) install TWRP v2.8.7.0
+    3) install FFOS 2.6
+    4) install Bluetooth and NFC bugfix for FFOS 2.6
+    5) change Default Network from CDMA to 3G/4G/...
 
 
 # Preparation
