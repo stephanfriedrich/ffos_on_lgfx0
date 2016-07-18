@@ -218,13 +218,13 @@ sudo adb reboot recovery
 
 > when your phone is connect to your pc, you should see the storage in you file browser and could copy the ZIP file easy to the phone
 
-2] within TWRP, install [fxup.zip](./install_bugfix/fxup.zip):
+3] within TWRP, install [fxup.zip](./install_bugfix/fxup.zip):
 > don't check the signature verification (ZIP file has no signature)
 
-- - *twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip* and install it
+- *twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip* and install it
 
 
-3] reboot device into ffos:
+4] reboot device into ffos:
 > now your NFC and Bluetooth should work fine (now you can activate both via Preferences)
 
 #### source:
