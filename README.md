@@ -152,7 +152,7 @@ sudo fastboot flash recovery twrp_2870-madai-a01-recovery.img
 * remove the battery & restart the telephone (imho you cant reboot in another way)
 * reinsert usb-cable
 
-2] check TWRP is installed
+2] check TWRP is installed<br>
 2.1] boot into recovery mode, to start TWRP-Menu (from Linux Shell): 
 
 ```shell
