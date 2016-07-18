@@ -152,7 +152,7 @@ If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jp
 
 1] install [TWRP](./install_twrp/twrp_302-madai01.img) by comunity-pre-compiled img (from Linux Shell):
 ```shell
-sudo fastboot flash recovery twrp_2870-madai-a01-recovery.img
+sudo fastboot flash recovery twrp_302-madai01.img
 ```
 1.1] After that completes successfully (should take only seconds):
 
