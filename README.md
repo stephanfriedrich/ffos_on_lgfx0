@@ -19,7 +19,7 @@ If you phone is already rooted (has root privileges), e.g. you dont need step 1.
  *  <a href="#3-install-ffos-26">3 - install FFOS 2.6 </a>
  *  <a href="#4-install-bluetooth-and-nfc-bugfix-for-ffos-26">4 - install Bluetooth and NFC bugfix for FFOS 2.6 </a>
  *  <a href="#5-change-default-network-from-cdma-to-3g4g">5 - change Default Network from CDMA to 3G/4G/... </a>
-
+ *  <a href="#adb-commands"> List of ADB-Commands </a>
 
 # Preparation
 ######################
@@ -168,11 +168,6 @@ sudo adb reboot
 ```
 
 
-> Command-Info: to start TWRP just run these Command from Linux Shell:
-```shell
-sudo adb reboot recovery
-```
-
 #### source:
 https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=new
 
@@ -271,4 +266,30 @@ reboot
 
 #### source:
 https://www.reddit.com/r/fx0/comments/430x8q/how_to_install_firefox_os_26_en_lg_fx0/?sort=new
+
+
+# adb commands
+######################
+
+
+- start TWRP (just run these Command from Linux Shell):
+```shell
+sudo adb reboot recovery
+```
+
+- reboot Phone (run these Command from Linux Shell):
+```shell
+sudo adb reboot
+```
+
+- check if ADB knows your Phone 
+```shell
+sudo adb devices
+```
+
+- connect to your Phone's shell
+```shell
+sudo adb shell
+```
+
 
