@@ -95,6 +95,7 @@ adb pull /sdcard/laf.img
 8] Enter the shell again:
 ```shell
 sudo adb shell
+su
 ```
 
 9] Erase laf partition
@@ -102,8 +103,9 @@ sudo adb shell
 dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/laf
 ```
 
-10] exit shell
+10] exit again
 ```shell
+exit
 exit
 ```
 
@@ -116,10 +118,8 @@ adb reboot
 12] Enter into FASHBOOT
 
 * shutdown device
-
-* First hold down the VOLUME UP button and insert a usb cable that is CONNECTED TO A COMPUTER.
+* First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
 Then the Display should show you a [Download-Titel on Black-Background](./install_fastboot/fastboot_menu.jpg)
-
 
 #### source:
 https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information
@@ -129,32 +129,26 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 #########################
 ##2) install TWRP v2.8.7.0
 TWRP is a custom recovery used to install custom software on your Android device.
-Boot TWRP:
-- press and hold button power & volume down, until *"au"*-logo appears, then release both buttons and quickly hold both buttons again (in my case i it won't start TWRP, but an FX0 programm which i don't needed
-- connect usb cable to phone, type into terminal
-```shell
-sudo adb reboot recovery
-```
-
 
 1] install [TWRP](./install_twrp/twrp_2870-madai-a01-recovery.img) by comunity-pre-compiled img
 ```shell
 fastboot flash recovery twrp_2870-madai-a01-recovery.img
 ```
+After that completes successfully (should take only seconds) ...
 
 2] after that completes successfully 
 
-* remove the battery
+* remove the battery & restart the telephone
 * reinsert usb-cable
-* power on to start ffos
 
 3] boot into recovery mode, to start TWRP-Menu to see if twrp is installed 
 ```shell
-adb reboot recovery
+sudo adb reboot recovery
 ```
 
 4] reboot device
-- *twrp-menu > reboot > system*
+
+* [boot screen](./install_fastboot/IMG_0132.jpg) > [TWRP-Menu](./install_fastboot/IMG_0133.jpg) -> [Reboot system](./install_fastboot/IMG_0135.jpg)
 
 ### start TWRP
 ```shell
@@ -202,10 +196,14 @@ This flashable ZIP also fixes the tiny bootanimation problem.
 adb reboot recovery
 ```
 
-2] copy [fxup.zip](./install_bugfix/fxup.zip) to internat or microSD storage
+2] copy [fxup.zip](./install_bugfix/fxup.zip) to internal or microSD storage
+
+*when your phone is connect to your pc, you should see the storage in you file browser and could copy the ZIP file easy to the phone*
 
 2] within TWRP install fxup.zip
-- *twrp-menu > install > select Storage > internal or microSD > click fxup.zip* and install it
+- *twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip* and install it
+
+- don't check the signature verification (ZIP file has no signature)
 
 3] reboot device into ffos and it should work
 
