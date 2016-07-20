@@ -116,7 +116,7 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 ##2) install TWRP v2.8.7.0
 TWRP is a custom recovery used to install custom software on your Android device.
 
-1] install [TWRP](./install_twrp/twrp_2870-madai-a01-recovery.img) by comunity-pre-compiled img
+1] install [TWRP](http://androiding.how/how-to-install-twrp-recovery-via-fastboot/) by [comunity-pre-compiled img](./install_twrp/twrp_2870-madai-a01-recovery.img)
 ```shell
 fastboot flash recovery twrp_2870-madai-a01-recovery.img
 ```
