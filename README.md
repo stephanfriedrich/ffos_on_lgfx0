@@ -156,7 +156,10 @@ sudo fastboot flash recovery twrp_302-madai01.img
 ```
 1.1] After that completes successfully (should take only seconds):
 
-* remove the battery & restart the telephone (imho you cant reboot in another way)
+* reboot your device via command  OR remove the battery & restart the telephone 
+```shell
+sudo fastboot reboot
+```
 * reinsert usb-cable
 
 2] check TWRP is installed<br>
@@ -288,6 +291,12 @@ sudo adb reboot recovery
 ```shell
 sudo adb reboot
 ```
+
+- reboot Phone within fastboot
+```shell
+sudo fastboot reboot
+```
+
 
 - check if ADB knows your Phone 
 ```shell
