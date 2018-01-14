@@ -12,7 +12,7 @@ I read over the internet, that only step 2 can brick your phone, these critical 
 # ::Table of Content::
 
 > You have to follow these steps, if your phone has original software installed.<br>
-If you phone is already rooted (has root privileges), e.g. you dont need step 1.<br>
+If you phone is already rooted (has root privileges), e.g. you dont need step "3. enable fastboot".<br>
 
 1. <a href="#list-of-commands">list of commands</a>
 2. <a href="#preparation">preparation </a>
@@ -122,11 +122,18 @@ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 Settings > Device Information > More Information > Developer* Menu switch (on FFOS).
 ```
 ---
-# 3: enable fastboot <i id="fastboot"></i>
+# 3: enable fastboot (root your device) <i id="fastboot"></i>
 
 At first you have to unlock your Device to install Firefox OS.
 
+> "WHAT IS ROOTING?
+> Rooting an Android phone or tablet is akin to jailbreaking an iPhone — basically, it allows you to dive deeper into a phone’s sub-system. It will allow you to access the entirety of the operating system to customize just about anything on your Android device. With root access, you can also get around any restrictions that your manufacturer or carrier may have applied.
+Rooting is best undertaken with caution. You will want to back up your phone’s software before you install — or “flash,” in rooting terms — a custom ROM (modified version of Android)."
+
 > "Fastboot mode is important because it is the first step in flashing custom updated and newer builds of Firefox OS/B2G on our phones. Fastboot is the first step because it is the mode that will actually allow us to flash new images (like custom recoveries new Firefox OS versions) to our devices in a mostly safe manner. Access to fastboot mode simply means that our device is __unlocked__ and ready to hack and modify!" ([quote](https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information))
+
+> "What is fastboot? In Android, fastboot is a special diagnostic and engineering protocol that you can boot your Android device into.  While in fastboot, you can modify the file system images from a computer over a USB connection.  It's a powerful, nerdy tool that deserves to be broken down into terms we all can understand" ([quote](https://www.androidcentral.com/android-z-what-fastboot))
+
 
 ## 3.1: howto
 
