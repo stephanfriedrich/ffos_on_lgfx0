@@ -20,7 +20,7 @@ If you phone is already rooted (has root privileges), e.g. you dont need step 1.
 4. <a href="#install-twrp-v2870">install TWRP v2.8.7.0 </a>
 5. <a href="#install-ffos-26">install FFOS 2.6 </a>
 6. <a href="#install-bluetooth-and-nfc-bugfix-for-ffos-26">install Bluetooth and NFC bugfix for FFOS 2.6 </a>
-7. <a href="#change-default-network-from-cdma-to-3g4g">change Default Network from CDMA to 3G/4G/... </a>
+7. <a href="#change-default-network-from-cdma-to-3g4g">change Default Network from CDMA to 3G/4G/   </a>
 
 ---
 # 1: list of commands <i id="list-of-commands"></i>
@@ -29,43 +29,43 @@ If you phone is already rooted (has root privileges), e.g. you dont need step 1.
 ## 1.1: misc commands
 
 * list usb devices (with vendor-id and device-id)
-... ```shell
-... lsusb
-... ```
+   ```shell
+   lsusb
+   ```
 
 ## 1.2: adb commands
 
 * start your phone in recovery-mode (e.g. TWRP)
-... ```shell
-... sudo adb reboot recovery
-... ```
+   ```shell
+   sudo adb reboot recovery
+   ```
 
 * reboot Phone
-... ```shell
-... sudo adb reboot
-... ```
+   ```shell
+   sudo adb reboot
+   ```
 
 * check if ADB knows your Phone
-... ```shell
-... sudo adb devices
-... ```
+   ```shell
+   sudo adb devices
+   ```
 
 * connect to your Phone's shell
-... ```shell
-... sudo adb shell
-... ```
+   ```shell
+   sudo adb shell
+   ```
 
 ## 1.3: fastboot commands
 
 * show fastboot devices
-... ```shell
-... sudo fastboot devices
-... ```
+   ```shell
+   sudo fastboot devices
+   ```
 
 * reboot Phone within fastboot
-... ```shell
-... sudo fastboot reboot
-... ```
+   ```shell
+   sudo fastboot reboot
+   ```
 
 ---
 # 2: preparation <i id="preparation"></i>
@@ -95,14 +95,13 @@ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 * **disconnect the USB** cable between the phone and the computer.
 * **reconnect** the phone.
 * run Linux-Command: ```sudo adb devices``` to confirm that Linux has permission to access the phone.
-
-you should see something like 
-
-```shell
-$ adb devices
-List of devices attached 
-LGOTMS9db5xxxx  device
-```
+   
+   you should see something like 
+   ```shell
+   $ adb devices
+   List of devices attached 
+   LGOTMS9db5xxxx  device
+   ```
 
 > ### ::NOTE:: identify the USB devices <i id="identify-the-usb-devices"</i>
 > > make sure the device is powered-up and its conneced to usb
@@ -119,8 +118,9 @@ LGOTMS9db5xxxx  device
 
 ### 2.2.2: Enable the **DEVELOPER-MENU** and **ADB-DEBUGGING** on your phone,  
 
-*Settings > Device Information > More Information > Developer* Menu switch (on FFOS).
-
+```
+Settings > Device Information > More Information > Developer* Menu switch (on FFOS).
+```
 ---
 # 3: enable fastboot <i id="fastboot"></i>
 
@@ -131,62 +131,62 @@ At first you have to unlock your Device to install Firefox OS.
 ## 3.1: howto
 
 1. check adb knows device
-... ```shell
-... sudo adb devices
-... ```
+   ```shell
+   sudo adb devices
+   ```
 
 2. enter shell (on your Phone from Linux Shell)
-... ```shell
-... sudo adb shell
-... ```
+   ```shell
+   sudo adb shell
+   ```
 
 3. start root (on your Phone from Linux Shell)
-... ```shell
-... su
-... ```
+   ```shell
+   su
+   ```
 
 4. Backup your [laf](./install_fastboot/laf.img) partition before deletion (on your Phone from Linux Shell)
-... ```shell
-... dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img
-... ```
+   ```shell
+   dd if=/dev/block/platform/msm_sdcc.1/by-name/laf of=/sdcard/laf.img
+   ```
 
 5. exit su login & exit adb shell
-... ```shell
-... exit
-... exit
-... ```
+   ```shell
+   exit
+   exit
+   ```
 
 6. pull the laf backup (save laf.img from your Phone to current directory)
-... ```shell
-... adb pull /sdcard/laf.img
-... ```
+   ```shell
+   adb pull /sdcard/laf.img
+   ```
 
 7. Enter the shell again
-... ```shell
-... sudo adb shell
-... su
-... ```
+   ```shell
+   sudo adb shell
+   su
+   ```
 
 8. Erase laf partition (on your Phone)
-... ```shell
-... dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/laf
-... ```
+   ```shell
+   dd if=/dev/zero of=/dev/block/platform/msm_sdcc.1/by-name/laf
+   ```
 
 9. exit again:
-... ```shell
-... exit
-... exit
-... ```
+   ```shell
+   exit
+   exit
+   ```
 
 10. reboot (your Phone from Linux Shell)
-... ```shell
-... sudo adb reboot
-... ```
+   ```shell
+   sudo adb reboot
+   ```
 
 11. Enter your Phone into FASHBOOT-Mode
-..1. shutdown device
-..2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
-... If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
+  1. shutdown device
+  2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
+     If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
 
 #### source:
 https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information
@@ -201,33 +201,34 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 ## 4.1: howto
 
 1. enter your phone into FASHBOOT-Mode
-..1. shutdown device
-..2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
-... If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
+  1. shutdown device
+  2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
+     If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
 
 2. install [TWRP](./install_twrp/twrp_302-madai01.img) by comunity-pre-compiled img (from Linux Shell):
-... ```shell
-... sudo fastboot flash recovery twrp_302-madai01.img
-... ```
+   ```shell
+   sudo fastboot flash recovery twrp_302-madai01.img
+   ```
 
 3. reboot your device via command  OR remove the battery & restart the telephone 
-... ```shell
-... sudo fastboot reboot
-... ```
+   ```shell
+   sudo fastboot reboot
+   ```
 
 ## 4.2: check TWRP is installed
 * boot into recovery mode, to start TWRP-Menu
-... ```shell
-... sudo adb reboot recovery
-... ```
+   ```shell
+   sudo adb reboot recovery
+   ```
 
 ## 4.3: reboot your phone, if TWRP works
 * reboot with TWRP:
-...[boot screen](./install_fastboot/IMG_0132.jpg) > [TWRP-Menu](./install_fastboot/IMG_0133.jpg) -> [Reboot system](./install_fastboot/IMG_0135.jpg)
-..* reboot with Linux Shell
-... ```shell
-... sudo adb reboot
-... ```
+  [boot screen](./install_fastboot/IMG_0132.jpg) > [TWRP-Menu](./install_fastboot/IMG_0133.jpg) -> [Reboot system](./install_fastboot/IMG_0135.jpg)
+
+  * reboot with Linux Shell
+     ```shell
+     sudo adb reboot
+     ```
 
 #### source:
 https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=new
@@ -239,19 +240,19 @@ https://www.reddit.com/r/fx0/comments/41p2tf/twrp_download_how_to_build/?sort=ne
 1. connect the device (eg FFOS is running) to the PC using USB wire (Phone debug-mode and adb enabled)
 
 2. give the install [script](./install_ffos/ffos2_6/shallow_flash.sh) exec permission:
-... ```shell
-... chmod +x shallow_flash.sh
-... ```
+   ```shell
+   chmod +x shallow_flash.sh
+   ```
 
 3. start the [script](./install_ffos/ffos2_6/shallow_flash.sh) to flash the device (file in folder [install_ffos/ffos2_6](./install_ffos/ffos2_6/) )
-... ```shell
-... ./shallow_flash.sh --gaia=gaia.zip --gecko=b2g-46.0a1.en-US.android-arm.tar.gz
-... ```
+   ```shell
+   ./shallow_flash.sh --gaia=gaia.zip --gecko=b2g-46.0a1.en-US.android-arm.tar.gz
+   ```
 
 4. reboot device if successfully
-... ```shell
-... sudo adb reboot
-... ```
+   ```shell
+   sudo adb reboot
+   ```
 
 #### source:
 https://ftp.mozilla.org/pub/b2g/nightly/latest-mozilla-central-flame-kk/
@@ -267,59 +268,59 @@ https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh
 ## 6.1: howto
 
 1. connect your Phone to PC via USB and start TWRP
-...```shell
-...sudo adb reboot recovery
-...```
+   ```shell
+   sudo adb reboot recovery
+   ```
 
 2. copy File [fxup.zip](./install_bugfix/fxup.zip) to microSD storage
-> when your phone is connect to your pc, you should see the storage in you file browser and could copy the ZIP file easy to the phone
+   > when your phone is connect to your pc, you should see the storage in you file browser and could copy the ZIP file easy to the phone
 
 3. install [fxup.zip](./install_bugfix/fxup.zip), within TWRP
-> don't check the signature verification (ZIP file has no signature)
+   > don't check the signature verification (ZIP file has no signature)
 
-```
-twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip and install it
-```
+   ```
+   twrp-menu > install > select Storage > sdcard or external_sd  > click fxup.zip and install it
+   ```
 
 4. reboot device into ffos
-> now your NFC and Bluetooth should work fine (now you can activate both via Preferences)
+   > now your NFC and Bluetooth should work fine (now you can activate both via Preferences)
 
 #### source:
 https://www.reddit.com/r/fx0/comments/47makh/fxos_26_compatibility_update_package/?sort=new
 
 ---
-# 7: change Default Network from CDMA to 3G/4G/... <i id="change-default-network-from-cdma-to-3g4g"></i>
+# 7: change Default Network from CDMA to 3G/4G/xx <i id="change-default-network-from-cdma-to-3g4g"></i>
 
 > e.g. to use your Device from Europe
 
 1. pull config from your Phone (via Linux Shell Command):
-... ```shell
-... sudo adb pull /system/build.prop
-... ```
+   ```shell
+   sudo adb pull /system/build.prop
+   ```
 
 2. in File build.prop, change the line **"ro.telephony.default_network=5"** to **"ro.telephony.default_network=10"**
 
 3. remount your Phone with write permissions (via Linux shell Command):
-... ```
-... adb shell
-... su && stop b2g
-... mount -o rw,remount /
-... mount -o rw,remount /system
-... exit && exit
-... ```
+   ```
+   adb shell
+   su && stop b2g
+   mount -o rw,remount /
+   mount -o rw,remount /system
+   exit && exit
+   ```
 
 4. upload the edited file to the internal SD card:
-... ```shell
-... adb push build.prop /sdcard/
-... ```
+   ```shell
+   adb push build.prop /sdcard/
+   ```
 
 5. to pass the edited build.prop from sdcard to the /system partition:
-... ```
-... adb shell && su
-... cp -R /sdcard/build.prop /system/
-... chmod 644 /system/build.prop
-... reboot
-... ```
+   ```
+   adb shell && su
+   cp -R /sdcard/build.prop /system/
+   chmod 644 /system/build.prop
+   reboot
+   ```
 
 6. on your Phone (FFOS), we go to *"Settings/mobile network and data"* and at *"Operator"* we choose *"automatic"*
 
