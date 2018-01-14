@@ -191,6 +191,7 @@ At first you have to unlock your Device to install Firefox OS.
 
 #### source:
 https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information
+https://wiki.debian.org/HowToIdentifyADevice/USB
 
 ---
 # ::Installation::
