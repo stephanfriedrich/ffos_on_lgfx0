@@ -114,7 +114,7 @@ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 > ```shell 
 > lsusb
 > ```
-> see the ![screenshot](./lsusb.jpg)
+> take a look at -> ![screenshot](./lsusb.jpg)
 
 ### 2.2.2: Enable the **DEVELOPER-MENU** and **ADB-DEBUGGING** on your phone,  
 
@@ -186,7 +186,8 @@ At first you have to unlock your Device to install Firefox OS.
 11. Enter your Phone into FASHBOOT-Mode
   1. shutdown device
   2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
-     If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
+     If Successful, your Phone should 
+     take a look at -> ![show this](./install_fastboot/fastboot_menu.jpg)
 
 #### source:
 https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and_information
@@ -203,7 +204,8 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
 1. enter your phone into FASHBOOT-Mode
   1. shutdown device
   2. First **hold** down the **VOLUME UP** button and insert a usb cable that is CONNECTED TO A COMPUTER.
-     If Successful, your Phone should [show this](./install_fastboot/fastboot_menu.jpg)
+     If Successful, your Phone should 
+     take a look at -> ![show this](./install_fastboot/fastboot_menu.jpg)
 
 2. install [TWRP](./install_twrp/twrp_302-madai01.img) by comunity-pre-compiled img (from Linux Shell):
    ```shell
@@ -222,8 +224,10 @@ https://www.reddit.com/r/FireFoxOS/comments/3uf92h/fx0_lgl25_fastboot_access_and
    ```
 
 ## 4.3: reboot your phone, if TWRP works
-* reboot with TWRP:
-  [boot screen](./install_fastboot/IMG_0132.jpg) > [TWRP-Menu](./install_fastboot/IMG_0133.jpg) -> [Reboot system](./install_fastboot/IMG_0135.jpg)
+* reboot your phone with TWRP:
+  1. ![boot screen](./install_fastboot/IMG_0132.jpg)
+  2. ![TWRP-Menu](./install_fastboot/IMG_0133.jpg)
+  3. ![Reboot system](./install_fastboot/IMG_0135.jpg)
 
   * reboot with Linux Shell
      ```shell
